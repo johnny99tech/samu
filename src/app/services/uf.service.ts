@@ -9,11 +9,15 @@ export class UFService {
     return UFs;
   }
   //metodo da uf
-  getUF(id: number): UF{
-    //varrer construtor p/ achar o 22-> piaui
-    if(id == {{id}} ){
-      //erro
-      return uf;
+  getUF(id:number): UF{
+    let uf:UF;
+    for(let entrada of UFs)
+    {
+      if(entrada.id == id){
+        uf = entrada;
+        break;
+      }
     }
+    return uf;
   }
 }
