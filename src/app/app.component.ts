@@ -6,6 +6,8 @@ import {UFService} from './services/uf.service'
 import {Dados} from './types/samu';//info dos dados
 import {SamuService} from './services/samu.service'
 
+//import {UFs} from './services/mock-ufs' > nao sei se serve
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
