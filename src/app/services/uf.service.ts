@@ -17,7 +17,7 @@ export class UFService {
         uf = entrada;
         break;
       }
-    }
+    } 
     return uf;
   }
 }
