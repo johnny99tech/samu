@@ -9,4 +9,6 @@ export class SamuService {
   getAllMunicipiosAtendidosPorEstado(): Dados[] {
     return VALORES;
   }
+  //codigos para media
+
 }
