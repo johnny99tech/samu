@@ -8,6 +8,7 @@
           <h2>Área: {{uf.area}}</h2>
           <h2>Média de municípios atendidos por ano: {{media}}</h2>
           <h3>
+            <!--<ul class = "ufs">-->
             <li *ngFor="let atend of samu">
             Ano: {{atend.ano}}  Municípios atendidos:{{atend.valor}}
             </li>
