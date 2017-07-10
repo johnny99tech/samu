@@ -28,7 +28,9 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         this.ufs = this.ufService.getAll();
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
-        //mostrar uf
+        //mostrar uf, media e /ano
         this.uf = this.ufService.getUF(this.id);
+        this.media = this.samuService.getMediaMunicipios(this.id);
+        this.samu = this.samuService.getMunicipiosPorAno(this.id);
     }
 }
