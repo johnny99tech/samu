@@ -18,7 +18,11 @@
     </div>
     <div class="dadososdados">
         <!--Todos os dados coletados-->
-
+        <ul class="ufs">  
+          <li *ngFor="let uf of ufs">
+             <span class="badge">{{uf.id}}</span>  {{uf.nome}}
+          </li>
+        </ul>
     </div>
 
   </div>
