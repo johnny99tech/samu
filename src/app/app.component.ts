@@ -34,7 +34,14 @@ export class AppComponent implements OnInit {
         this.uf = this.ufService.getUF(this.id);
         this.media = this.samuService.getMediaMunicipios(this.id);
         this.samu = this.samuService.getMunicipiosPorAno(this.id);
-        //criada para pegar os dados da uf
+        //todas ufs
+        this.uf = this.UF();
         //this.uf = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf);
     }
+    //todas ufs
+    UF(): UF {
+      for (let uf of this.ufs) {
+        if (uf.id == this.meu_id) return uf;
+      }
+  }
 }
