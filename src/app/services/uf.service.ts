@@ -8,6 +8,7 @@ export class UFService {
   getAll(): UF[] {
     return UFs;
   }
+  
   //metodo da uf
   getUF(id:number): UF{
     let uf:UF;
@@ -17,7 +18,7 @@ export class UFService {
         uf = entrada;
         break;
       }
-    } 
+    }
     return uf;
   }
 }

@@ -34,5 +34,7 @@ export class AppComponent implements OnInit {
         this.uf = this.ufService.getUF(this.id);
         this.media = this.samuService.getMediaMunicipios(this.id);
         this.samu = this.samuService.getMunicipiosPorAno(this.id);
+        //criada para pegar os dados da uf
+        //this.uf = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf);
     }
 }

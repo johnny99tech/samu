@@ -1,34 +1,40 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center" class="title">
-
   <div class="cabeçalho">
-     <h1>{{uf.nome}}</h1><!--nome do estado-->
-     <h1>ID: {{uf.id}}</h1>
-     <div>      
-          <h2>Área: {{uf.area}}</h2>
-          <h2>Média de municípios atendidos por ano: {{media}}</h2>
-          <h3>
-            <!--<ul class = "ufs">-->
-            <li *ngFor="let atend of samu">
-            Ano: {{atend.ano}}  Municípios atendidos:{{atend.valor}}
-            </li>
-          </h3>
-      </div>
-    
+      <h1>{{uf.nome}}</h1><!--nome do estado-->
+
+    <div class="resumo">
+      <h1>ID: {{uf.id}}</h1>
+      <h2>Área: {{uf.area}}</h2>
+    </div>
+
+    <div class="dadosUF">
+      <h2>Média de municípios atendidos por ano: {{media}}</h2>
+      <h3>
+        <li *ngFor="let atend of samu">
+          Ano: {{atend.ano}}  Municípios atendidos:{{atend.valor}}
+        </li>
+      </h3>
+    </div>
+    <div class="dadososdados">
+        <!--Todos os dados coletados-->
+
+    </div>
+
   </div>
 </div>
 
-    <!-- <h2>{{urls}} details!</h2> id do estado-->
-    <!--media de municipios do estado-->
-    <!--ano  e qunatidade de municipios atendidos da UF-->
-    
+<!-- <h2>{{urls}} details!</h2> id do estado-->
+<!--media de municipios do estado-->
+<!--ano  e qunatidade de municipios atendidos da UF-->
 
-    <!--
-    <ul class="url">
-      <li *ngFor="let hero of heroes"
-        [class.selected]="urlss === selectedURL"
-        (click)="onSelect(urlss)">
-        <span class="badge">{{urlss.id}}</span> {{urlss.name}}
-      </li>
-    </ul>
-    <hero-detail [hero]="selectedURL"></hero-detail>-->
+
+<!--
+<ul class="url">
+<li *ngFor="let hero of heroes"
+[class.selected]="urlss === selectedURL"
+(click)="onSelect(urlss)">
+<span class="badge">{{urlss.id}}</span> {{urlss.name}}
+</li>
+</ul>
+<hero-detail [hero]="selectedURL"></hero-detail>-->
