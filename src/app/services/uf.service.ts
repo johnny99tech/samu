@@ -8,9 +8,9 @@ export class UFService {
   getAll(): UF[] {
     return UFs;
   }
-  
+
   //metodo da uf
-  getUF(id:number): UF{
+  getUF(id:number): UF {
     let uf:UF;
     for(let entrada of UFs)
     {

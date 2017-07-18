@@ -1,0 +1,9 @@
+<div class="detalhe">
+      <h2>Média de municípios atendidos por ano: {{media}}</h2>
+      <p>
+        <li *ngFor="let atend of samu">
+          <!--pega os dados de samu-->
+          Ano: {{atend.ano}}  Municípios atendidos:{{atend.valor}}
+        </li>
+      </p>
+</div>

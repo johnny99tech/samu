@@ -7,6 +7,7 @@ import {Dados} from './types/samu';//info dos dados
 import {SamuService} from './services/samu.service'
 
 //import {UFs} from './services/mock-ufs' > nao sei se serve
+//import {CabecalhoComponent} from './cabecalho/cabecalho.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ import {SamuService} from './services/samu.service'
   providers: [SamuService,UFService]
 })
 export class AppComponent implements OnInit {
-    title = 'Piauí';
+    title = 'App JonnyBoy Samu';
     id = 22;
     ufs : UF[];
     dados_da_samu : Dados[];
@@ -41,7 +42,7 @@ export class AppComponent implements OnInit {
     //todas ufs
     UF(): UF {
       for (let uf of this.ufs) {
-        if (uf.id == this.meu_id) return uf;
+        if (uf.id == this.id) return uf;
       }
   }
 }

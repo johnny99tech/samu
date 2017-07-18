@@ -1,0 +1,9 @@
+.title {
+  font-family: fantasy;
+  color: blue;
+  text-align: center;
+}
+
+.title nav {
+  color: red;
+}
