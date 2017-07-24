@@ -8,7 +8,8 @@ import { ResumoComponent } from './resumo/resumo.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { UnidadesComponent } from './unidades/unidades.component';
 import { DetalheComponent } from './detalhe/detalhe.component';
-import { TodosDadosComponent } from './todos-dados/todos-dados.component';
+//import { TodosDadosComponent } from './todos-dados/todos-dados.component';
+import { DadosComponent } from './dados/dados.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TodosDadosComponent } from './todos-dados/todos-dados.component';
     ResumoComponent,
     UnidadesComponent,
     DetalheComponent,
-    TodosDadosComponent
+  //  TodosDadosComponent,
+    DadosComponent
   ],
   imports: [
     BrowserModule,

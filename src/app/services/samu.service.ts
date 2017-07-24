@@ -32,19 +32,20 @@ export class SamuService {
 
   //metodo para media por municipios
   getMediaMunicipios(id: number): number{
-    let numero: number;
-    numero = 0;
-    let anos: number;
-    anos = 0;
-    for(let entrada of VALORES)
-    {
-      if(entrada.uf_id == id)
-      {
-        numero += entrada.valor;
-        anos++;
-      }
-    }
-    return Math.round(numero/anos);
+     let numero: number;
+     numero = 0;
+     let anos: number;
+     anos = 0;
+     for(let entrada of VALORES)
+     {
+       if(entrada.uf_id == id)
+       {
+         numero += entrada.valor;
+         anos++;
+       }
+     }
+     return Math.round(numero/anos);
+    //return 100;
   }
 
   getMunicipiosPorAno(id: number): Dados[]{

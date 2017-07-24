@@ -24,7 +24,6 @@ export class AppComponent implements OnInit {
     samu: Dados[];
     uf: UF;
 
-
     constructor(private ufService: UFService, private samuService: SamuService)
     { }
 
