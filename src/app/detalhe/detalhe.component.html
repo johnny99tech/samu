@@ -1,9 +1,9 @@
 <div class="detalhe">
-      <h2>Média de municípios atendidos por ano: {{media}}</h2>
       <p>
-        <li *ngFor="let atend of samu">
+        <!-- pega os dados de tdsdados -->
+        <li *ngFor="let atend of tdsdados">
           <!--pega os dados de samu-->
-          Ano: {{atend.ano}}  Municípios atendidos:{{atend.valor}}
+          Nome da UF: {{atend.uf.nome}} Ano: {{atend.ano}}  Municípios atendidos:{{atend.valor}}
         </li>
       </p>
 </div>

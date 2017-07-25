@@ -1,4 +1,3 @@
-
 import {UF} from '../types/uf';
 
 export const UFs : UF[] = [

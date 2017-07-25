@@ -1,5 +1,9 @@
 <div class="dados">
-      <p>nome(id): {{uf_id}}</p>
+      <!-- <p>nome(id): {{uf_id}}</p>
       <p>valor: {{valor}}</p>
-      <p>ano: {{ano}}</p>
+      <p>ano: {{ano}}</p> -->
+
+      <p><li *ngFor="let atend of samu">
+        Ano: {{atend.ano}}  Municípios atendidos:{{atend.valor}}
+      </li></p>
 </div>

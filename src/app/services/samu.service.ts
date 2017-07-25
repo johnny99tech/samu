@@ -9,8 +9,7 @@ export class SamuService {
   getAllMunicipiosAtendidosPorEstado(): Dados[] {
     return VALORES;
   }
-/*
-  getPorUFMunicipiosAtendidosPorEstado(uf : number): Dados[]{
+/*  getPorUFMunicipiosAtendidosPorEstado(uf : number): Dados[]{
     //receber parametro da uf e retornar os dados da UF
     let numero: number;
     numero = 0;
@@ -26,9 +25,7 @@ export class SamuService {
     }
 
     return Dados;
-  }
-
-*/
+  }*/
 
   //metodo para media por municipios
   getMediaMunicipios(id: number): number{

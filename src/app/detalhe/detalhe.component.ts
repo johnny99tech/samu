@@ -4,24 +4,26 @@ import {UF} from '../types/uf';
 import {Dados} from '../types/samu';//info dos dados
 import {SamuService} from '../services/samu.service';
 
+import {DadoNome} from '../types/newmodel';
+import {ModeloNovoService} from '../services/new-model.services';
+
+
 @Component({
   selector: 'app-detalhe',
   templateUrl: './detalhe.component.html',
   styleUrls: ['./detalhe.component.css'],
-  providers: [SamuService, Dados]
+  providers: [SamuService, Dados, DadoNome, ModeloNovoService]
 })
 export class DetalheComponent implements OnInit {
-
-  uf : UF;
+  //uf : UF;
   //dados : Dados[];
-  samu : Dados[];
+  //samu : Dados[];
+  tdsdados : DadoNome[] = [];
 
-  constructor(private samuService: SamuService) { }
+  constructor(private serviceDados: ModeloNovoService) { }
 
   ngOnInit() {
-    this.samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
-    //.getAllMunicipiosAtendidosPorEstado();
-    //this.dados = this.ufService.getMunicipiosPorAno(22);
-    //this.samu = this.samuService.getMunicipiosPorAno(22);
+    this.tdsdados = this.serviceDados.mesclardados();
   }
+
 }

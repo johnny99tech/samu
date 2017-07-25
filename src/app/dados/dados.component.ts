@@ -1,29 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 
 import {UF} from '../types/uf';
-import {Dados} from '../types/samu';//info dos dados
-import {SamuService} from '../services/samu.service';
+import {UFService} from '../services/uf.service'
 
-import {VALORES} from '../services/mock-samu_municipios_atendidos_por_estado';
+import {Dados} from '../types/samu';
+import {SamuService} from '../services/samu.service'
+
+import {UFs} from '../services/mock-ufs'
 
 @Component({
   selector: 'app-dados',
   templateUrl: './dados.component.html',
   styleUrls: ['./dados.component.css'],
-  providers: [SamuService]
+  providers: [SamuService, UFService]
 })
 export class DadosComponent implements OnInit {
+   ufs : UF[];
+   dados_da_samu : Dados[];
+   id = 22;
+   uf: UF;
+   samu: Dados[];
 
-  uf : UF;
-  //dados : Dados[];
-  samu : Dados[];
-//  valores : SamuService;
+  constructor(private ufService: UFService, private samuService: SamuService) { }
 
-  constructor(private samuService: SamuService) { }
-
-  ngOnInit() {
+    ngOnInit():void {
     //pegar valores de VALORES
-
+       this.ufs = this.ufService.getAll();
+       this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
+       this.uf = this.ufService.getUF(this.id);
+       this.samu = this.samuService.getMunicipiosPorAno(22);
   }
-
 }
